@@ -1,5 +1,6 @@
 import { Button, TextField } from "@mui/material";
 import React from "react";
+import Footer from "./Footer";
 import Top from "./Top";
 
 const Home=()=>{
@@ -10,6 +11,12 @@ const Home=()=>{
         "overflow": 'hidden',
         "background-size": 'cover',
         "width": '100%'
+    }
+    
+    const imgSize={
+
+        "width": "300px",
+        "height": '300px'
     }
 
     return(
@@ -33,8 +40,14 @@ const Home=()=>{
                             id="filled-required"
                             label="Destination"
                         />
-                        
-                        <input type="date"/>
+
+                        <TextField
+                        required
+                            id="date"
+                            label="Date"
+                            type="date"
+                            defaultValue="2022-02-12"
+                        />
                         
                         <div className="text-center mt-2">
                         <Button variant="contained" color="error">Search</Button>
@@ -43,11 +56,34 @@ const Home=()=>{
                         
                         <div className="container mt-lg-2">
                             <div className="d-flex flex-row flex-nowrap overflow-auto p-4">
-                                <div className="card col-lg-4 col-md-6 col-sm-12 p-4 me-3 mt-3">
-                                    <div className="card-body">
+                                <div className="card col-lg-4 col-md-6 col-sm-12 p-2 me-1 mt-2" >
+                                    <div className="card-body shadow-lg ">
+
+                                        <img style={imgSize} src="../pics/one.png" className="me-1 card-img" alt="..."/>
                                         
-                                        <img src="../pics/one.png" className="me-3" alt="..."/>
-                                        <img src="../pics/two.jpg"  alt="..."/>
+                                    </div>
+                                 </div>
+
+                                 <div className="card col-lg-4 col-md-6 col-sm-12 p-2 me-1 mt-2" >
+                                    <div className="card-body shadow-lg">
+                                        
+                                        <img style={imgSize} src="../pics/two.jpg" className="me-1 card-img" alt="..."/>
+                                        
+                                    </div>
+                                 </div>
+
+                                 <div className="card col-lg-4 col-md-6 col-sm-12 p-2 me-1 mt-2" >
+                                    <div className="card-body shadow-lg">
+                                        
+                                        <img style={imgSize} src="../pics/three.jpg" className="me-1 card-img" alt="..."/>
+                                        
+                                    </div>
+                                 </div>
+
+                                 <div className="card col-lg-4 col-md-6 col-sm-12 p-2 me-1 mt-2" >
+                                    <div className="card-body shadow-lg">
+                                        
+                                        <img style={imgSize} src="../pics/two.jpg" className="me-1 card-img" alt="..."/>
                                         
                                     </div>
                                  </div>
@@ -55,6 +91,8 @@ const Home=()=>{
                         </div>
                 </div>
             {/* </div> */}
+            <img style={backSize} src="../pics/covid.png" alt="backgroundimage"/>
+            <Footer/>
         </>
     );
 }

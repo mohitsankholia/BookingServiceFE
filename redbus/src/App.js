@@ -1,9 +1,9 @@
 import React from 'react'
 import Login from './Login'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-//import Bar from './Bar'
 import Home from './Home'
 import Buses from "./Buses"
+
 
 const App=()=>{
   return (

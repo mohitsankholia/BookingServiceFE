@@ -1,29 +1,11 @@
-import React, { useEffect, useState }  from "react";
-import { show } from "./Api";
+import React  from "react";
 import EditIcon from '@mui/icons-material/Edit';
 import Button from '@mui/material/Button';
 import Top from "./Top";
+import details from "./Listing";
 
 const Buses=()=>{
-    const [all,setAll]=useState([])
     
-    const[data,setData]=useState(
-        {
-            "busId":0,
-            "busNo":0,
-            "source":"",
-            "destination":""
-        }
-    )
-    useEffect(()=>{
-        iterate()
-    },[])
-
-    const iterate=async()=>{
-        const t=await show()
-        setAll(t.data)
-    }
-
 
     return(
         <> 
@@ -41,7 +23,7 @@ const Buses=()=>{
                             </tr>
                         </thead>
                         <tbody>
-                            {all.map((data,index)=>(
+                            {details.map((data,index)=>(
                                 <tr>
                                     <td>{data.busId}</td>
                                     <td>{data.busNo}</td>

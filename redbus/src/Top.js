@@ -1,5 +1,4 @@
 import React from "react";
-//import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {Navbar, Nav} from "react-bootstrap"
 
 const Top=()=>{
@@ -19,7 +18,7 @@ const Top=()=>{
                     {/* <Navbar.Brand href="#"><h1 className="text-light">redBus</h1></Navbar.Brand> */}
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="d-flex flex-row fw-bold">
+                            <Nav className="d-flex flex-row fw-bold text-white">
                                 <Nav.Link href="#">BUS TICKET</Nav.Link>
                                 <Nav.Link href="#">RydeNew</Nav.Link>
                                 <Nav.Link href="#">redRail</Nav.Link>
