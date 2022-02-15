@@ -24,10 +24,10 @@ const Home=()=>{
             <Top/>
             <img style={backSize} src="../pics/background.png" alt="backgroundimage"/>
             
-            {/* <div className="mt-3 container" > */}
+            <div className="mt-3 container" >
                 <div className="row justify-content-center">
-                    <div className="col-lg-6 col-md-8 col-sm-12 shadow-sm p-3">
-                        
+                    <div className="col-lg-8 col-md-8 col-sm-12 shadow-sm p-3">
+                    <div className="container justify-content-center">
                         <TextField 
                             required
                             id="outlined-required"
@@ -51,6 +51,7 @@ const Home=()=>{
                         
                         <div className="text-center mt-2">
                         <Button variant="contained" color="error">Search</Button>
+                        </div>
                         </div>
                     </div>
                         
@@ -90,7 +91,7 @@ const Home=()=>{
                             </div> 
                         </div>
                 </div>
-            {/* </div> */}
+            </div>
             <img style={backSize} src="../pics/covid.png" alt="backgroundimage"/>
             <Footer/>
         </>
