@@ -1,6 +1,7 @@
 import { Button, TextField } from "@mui/material";
-import React from "react";
+import React, {useState } from "react";
 import Footer from "./Footer";
+import Search from "./Search";
 import Top from "./Top";
 
 const Home=()=>{
@@ -19,8 +20,26 @@ const Home=()=>{
         "height": '300px'
     }
 
+    const[cview, setCview]=useState(false)
+
+    const callSearch=()=>{
+        setCview(true) 
+    }
+
     return(
         <>
+            {(cview)? 
+                <>
+                    <Search/>
+                    <div className="text-center mt-2">
+                    <button className="btn btn-outline-dark" 
+                         onClick={()=>setCview(false)}>
+                         Back
+                     </button>
+                     </div>
+                </>
+            :
+            <>
             <Top/>
             <img style={backSize} src="../pics/background.png" alt="backgroundimage"/>
             
@@ -28,17 +47,20 @@ const Home=()=>{
                 <div className="row justify-content-center">
                     <div className="col-lg-8 col-md-8 col-sm-12 shadow-sm p-3">
                     <div className="container justify-content-center">
+                    
                         <TextField 
                             required
                             id="outlined-required"
                             input
                             label="Source"
+                            name="source"
                          /> 
 
                         <TextField
                             required
                             id="filled-required"
                             label="Destination"
+                            name="destination"
                         />
 
                         <TextField
@@ -50,7 +72,11 @@ const Home=()=>{
                         />
                         
                         <div className="text-center mt-2">
-                        <Button variant="contained" color="error">Search</Button>
+                        <Button variant="contained" color="error" 
+                        onClick={callSearch}>
+                            Search
+                        </Button>
+                        
                         </div>
                         </div>
                     </div>
@@ -94,6 +120,8 @@ const Home=()=>{
             </div>
             <img style={backSize} src="../pics/covid.png" alt="backgroundimage"/>
             <Footer/>
+            </>
+        }
         </>
     );
 }
